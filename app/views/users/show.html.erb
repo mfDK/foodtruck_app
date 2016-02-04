@@ -5,3 +5,5 @@
 
 <%= link_to "Edit" , edit_user_path(params[:id]) %>
 <%= link_to "Delete" , @user , method: :delete %>
+
+<%= link_to "Log Out" , log_out_path(current_user), method: :delete %>
