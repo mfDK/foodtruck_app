@@ -1,2 +1,12 @@
 <h1>Foods#new</h1>
 <p>Find me in app/views/foods/new.html.erb</p>
+
+<%= form_for [@current_truck,@food] do |f| %>
+	<%= f.label :food_name %>
+	<%= f.text_field :food_name %>
+	<%= f.label :description %>
+	<%= f.text_field :description %>
+	<%= f.label :price %>
+	<%= f.text_field :price %>
+	<%= f.submit "Add Food" %>
+<% end %>

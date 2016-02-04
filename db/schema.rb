@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160204002019) do
+ActiveRecord::Schema.define(version: 20160204185933) do
 
   create_table "foods", force: :cascade do |t|
     t.string   "food_name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20160204002019) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "truck_id"
+    t.decimal  "price"
   end
 
   add_index "foods", ["truck_id"], name: "index_foods_on_truck_id"
@@ -40,8 +41,9 @@ ActiveRecord::Schema.define(version: 20160204002019) do
     t.string   "state"
     t.string   "city"
     t.integer  "zip"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.boolean  "truck_owner",     default: false
   end
 
 end

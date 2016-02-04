@@ -2,8 +2,15 @@
 <h2><%= @user.fname %></h2>
 <h3><%= @user.email %></h3>
 <h4><%= @user.password_digest %></h4>
+<h5><%= @user.truck_owner %></h5>
 
 <%= link_to "Edit" , edit_user_path(params[:id]) %>
 <%= link_to "Delete" , @user , method: :delete %>
 
 <%= link_to "Log Out" , log_out_path(current_user), method: :delete %>
+
+<% if @user.truck_owner? %>
+	<%= link_to "Create Truck" , new_truck_path %>
+<% else %>
+	<h4>You are not a truck owner</h4>
+<% end %>
