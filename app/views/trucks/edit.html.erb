@@ -1,2 +1,9 @@
 <h1>Trucks#edit</h1>
-<p>Find me in app/views/trucks/edit.html.erb</p>
+
+<%= form_for @truck do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.label :description %>
+	<%= f.text_field :description %>
+	<%= f.submit "Edit Truck" %>
+<% end %>

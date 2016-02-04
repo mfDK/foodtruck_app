@@ -1,2 +1,5 @@
 <h1>Foods#show</h1>
-<p>Find me in app/views/foods/show.html.erb</p>
+<%= @food.food_name %>
+<%= @food.description %>
+<%= @food.price %>
+<%= link_to "Edit" , edit_truck_food_path(params[:truck_id],params[:id]) %>
