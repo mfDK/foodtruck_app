@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  truck_id: 
+  item1: MyString
+  item2: MyString
+  item3: MyString
+  item4: MyString
+  item5: MyString
+  item6: MyString
+  item7: MyString
+  item8: MyString
+  item9: MyString
+  item10: MyString
+
+two:
+  user_id: 
+  truck_id: 
+  item1: MyString
+  item2: MyString
+  item3: MyString
+  item4: MyString
+  item5: MyString
+  item6: MyString
+  item7: MyString
+  item8: MyString
+  item9: MyString
+  item10: MyString
