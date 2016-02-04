@@ -5,6 +5,7 @@ class TrucksController < ApplicationController
 
   def show
     @truck = Truck.find(params[:id])
+    @foods = Food.where(truck_id: params[:id]).all
   end
 
   def new
