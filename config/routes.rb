@@ -23,7 +23,9 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy' , as: :log_out
 
-  resources :users
+  resources :users do 
+    resources :orders
+  end
   resources :trucks do 
     resources :foods
   end
