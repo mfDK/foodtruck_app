@@ -1,10 +1,12 @@
 class OrdersController < ApplicationController
   def index
-  	@current_truck = Truck.find(params[:truck_id]).all
+  	@current_truck = Truck.find(params[:truck_id])
   	# Must make this a helper method
+  	@truck_orders = @current_truck.orders.all
   end
 
   def show
+  	@order = Order.find(params[:id])
   end
 
   def new
