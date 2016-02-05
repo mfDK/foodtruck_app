@@ -9,16 +9,16 @@
 <%= f.label :user_id %>
 <%= f.text_field :user_id , value: current_user.id %>
 
-<%= collection_select :order , :item1 , @current_truck.foods , :id , :food_name , prompt: true %>
-<%= collection_select :order , :item2 , @current_truck.foods , :id , :food_name , prompt: true %>
-<%= collection_select :order , :item3 , @current_truck.foods , :id , :food_name , prompt: true %>
-<%= collection_select :order , :item4 , @current_truck.foods , :id , :food_name , prompt: true %>
-<%= collection_select :order , :item5 , @current_truck.foods , :id , :food_name , prompt: true %>
-<%= collection_select :order , :item6 , @current_truck.foods , :id , :food_name , prompt: true %>
-<%= collection_select :order , :item7 , @current_truck.foods , :id , :food_name , prompt: true %>
-<%= collection_select :order , :item8 , @current_truck.foods , :id , :food_name , prompt: true %>
-<%= collection_select :order , :item9 , @current_truck.foods , :id , :food_name , prompt: true %>
-<%= collection_select :order , :item10 , @current_truck.foods , :id , :food_name , prompt: true %>
+<%= collection_select :order , :item1 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item2 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item3 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item4 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item5 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item6 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item7 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item8 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item9 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item10 , @current_truck.foods , :food_name , :food_name , prompt: true %>
 
 <%= f.submit "Submit Order" %>
 <% end %>
