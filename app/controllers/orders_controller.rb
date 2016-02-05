@@ -11,8 +11,13 @@ class OrdersController < ApplicationController
   end
 
   def create
-  	@truck = Truck.all
+    @truck= Truck.find(params[:id])
   	@order = current_user.orders.build(order_params)
+    if Geocoder::Calculations.distance_between([current_user.latitude,current_user.longitude], [@truck.latitude, @truck.longitude], :mi) < 2
+    else
+      flash[:alert] = "You're out of delivery range."
+      render :new
+    end
   	if @order.save
   		flash[:notice] = "Your Order was created!"
   		redirect_to user_order_path(current_user,params[:id])
