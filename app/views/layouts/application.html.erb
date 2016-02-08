@@ -16,7 +16,6 @@
 		<div class="navbar-header">
 
 		<div class="container4">
-
 		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 			<a class="navbar-brand1" href="#">
 				<img alt="Brand" src="<%= image_path("logo_icon.png")%>" class="logo_icon">
@@ -37,11 +36,34 @@
 				<span class="icon-bar"></span>
 			</button>
 		</div>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      	<ul class="nav navbar-nav">
-		        	<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+		      		<% if logged_in? %>
+			        	<li>
+			        		<a href="/trucks">Trucks</a>
+			        	</li>
+			        	<li>
+			        		<a href="#">About</a>
+			        	</li>
+			        	<li>
+			        		<a href="#">FAQ</a>
+			        	</li>
+			        	<li>
+			        		<a href="#"><%= link_to "Log Out" , log_out_path(current_user), method: :delete %></a>
+			        	</li>
+		        	<% else %>
+			        	<li>
+			        		<a href="/trucks">Trucks</a>
+			        	</li>
+			        	<li>
+			        		<a href="#">About</a>
+			        	</li>
+			        	<li>
+			        		<a href="#">FAQ</a>
+			        	</li>
+		        	<% end %>
 		      	</ul>
-		      </div>
+		    </div>
 
 	</div>
 
