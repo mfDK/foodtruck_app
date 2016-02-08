@@ -141,7 +141,10 @@ input[type=submit] {
 
 
 }
-
+#map{
+	height: 400px;
+	width: 500px;	
+}
 
 @media all and (max-width: 768px) {
 	.nav.navbar-nav {

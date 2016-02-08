@@ -6,8 +6,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
 </head>
-<body>
+<body onload= "findMe()">
 
 <!-- this is the navbar (start) -->
 <nav class="navbar navbar-default">
