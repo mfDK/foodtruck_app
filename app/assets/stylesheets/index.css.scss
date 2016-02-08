@@ -1,0 +1,151 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@media all and (max-width: 1600px) {
+
+body {
+	font-family: "Bree serif";
+	background-color: #337AB7;
+}
+.navbar.navbar-default {
+	height: 80px;
+}
+.logo_icon {
+	width: 80px;
+}
+.glyphicon.glyphicon-menu-hamburger{
+	font-size: 30px;
+	margin: 20px 20px;
+}
+.navbar-brand2 {
+	// margin-left: 20%;
+	font-size: 1.6em;
+	// display: inline-block;
+    // margin-top: 20px;
+}
+
+#banner_txt {
+	text-align: center
+}
+.signin_form {
+	background-color: rgba(0,0,0,0.3);
+    height: 300px;
+    color: white;
+    margin-bottom: 30px;
+}
+.signup_banner {
+	background-color: rgba(0,0,0,0.3);
+    height: 400px;
+    color: white;
+}
+.signin_banner {
+	background-color: rgba(0,0,0,0.3);
+    color: white;
+} 
+.center {
+	text-align: center;
+}
+input[type=submit] {
+	color: black;
+}
+.map_img {
+	width: 350px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.banner_text {
+	background-color: rgba(0,0,0,0.3);
+	width: 350px;
+    color: white;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+.schedule1 {
+	margin-top: 40px;
+}
+.nav-tabs {
+	background-color: rgba(0,0,0,0.3);
+}
+.tab-content {
+	background-color: rgba(0,0,0,0.3);
+	width: 350px;
+    color: white;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+.nav-tabs>li>a {
+	margin-right: -6px;
+}
+.no_link {
+	text-decoration: none;
+	color: white;
+}
+.no_link:hover {
+	color: white;
+	text-decoration: none;
+}
+.panel-footer {
+	background-color: rgba(0,0,0,0.3);
+	margin-top: 50px;
+	border: none;
+	color: white;
+}
+#carousel-example-generic {
+    margin-top: 20px;
+}
+.panel.panel-default {
+	margin-top: 20px;
+}
+.mobile_img {
+	    width: 300px;
+}
+.add_button {
+	color: white;
+	margin-top: 15px;
+}
+.modal-content{
+	height: 150px;
+    margin-top: 50%;
+}
+.signin_input {
+	width: 60%;
+    margin: 0 auto;
+}
+.nav.nav-tabs.schedule1{
+	border: none;
+}
+.image_carousel {
+	padding: 0;
+}
+.carousel {
+	margin: -15px;
+}
+.img_slider {
+	width: 100%;
+}
+
+.container1, .container2 {
+	margin-bottom: 30px;
+	width: 90%;
+}
+.container4 {
+	margin-top: 15px;
+}
+#bs-example-navbar-collapse-1 {
+	border: 0;
+}
+.nav.navbar-nav {
+	display: none;
+}
+
+
+
+}
+
+
+@media all and (max-width: 768px) {
+	.nav.navbar-nav {
+	display: block;
+	}
+}
+

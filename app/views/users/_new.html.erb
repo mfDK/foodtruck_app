@@ -1,0 +1,24 @@
+<div class="container">
+<div class="row signup_banner">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<h1 class="center">Create your Account</h1>
+	<div class="signin_input center">
+		<%= form_for @user do |f| %>
+			<%= f.label :email %>
+			<br>
+			<%= f.text_field :email %>
+			<br>
+			<%= f.label :password %>
+			<br>
+			<%= f.password_field :password %>
+			<br>
+			<%= f.label :password_confirmation %>
+			<br>
+			<%= f.password_field :password_confirmation %>
+			<br><br>
+			<%= f.submit "Sign Up" %>
+		<% end %>
+	</div>
+	</div>
+</div>
+</div>
