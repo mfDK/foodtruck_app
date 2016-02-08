@@ -4,6 +4,8 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(current_user)
+    @test_truck = Truck.find(1)
+    @my_orders = current_user.orders
   end
 
   def new
@@ -28,7 +30,7 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
   	@user.update(user_params)
   	@user.save
-  	redirect_to @user
+  	redirect_to root_path
   end
 
   def destroy
