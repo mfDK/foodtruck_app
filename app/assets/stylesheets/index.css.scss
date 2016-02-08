@@ -30,17 +30,32 @@ body {
 .signin_form {
 	background-color: rgba(0,0,0,0.3);
     height: 300px;
-    color: white;
     margin-bottom: 30px;
 }
+
+// This is for the Title of the homepage
+#head-banner {
+	color: white;
+}
+////////////////////////////////////////////
+
+// This is for the h1 of the create account
+.create-acc {
+	color:white;
+}
+
+
+.form-input {
+	color: white;
+}
+////////////////////////////////////////////
+
 .signup_banner {
 	background-color: rgba(0,0,0,0.3);
     height: 400px;
-    color: white;
 }
 .signin_banner {
 	background-color: rgba(0,0,0,0.3);
-    color: white;
 } 
 .center {
 	text-align: center;
@@ -55,7 +70,10 @@ input[type=submit] {
 }
 .banner_text {
 	background-color: rgba(0,0,0,0.3);
-    color: white;
+	width: 350px;
+    margin-left: 25px;
+    margin-top: 15px;
+
 }
 .schedule1 {
 	margin-top: 40px;
@@ -66,7 +84,6 @@ input[type=submit] {
 .tab-content {
 	background-color: rgba(0,0,0,0.3);
 	width: 350px;
-    color: white;
     margin-left: 25px;
     margin-top: 15px;
 }
@@ -75,17 +92,17 @@ input[type=submit] {
 }
 .no_link {
 	text-decoration: none;
-	color: white;
+	// color: white;
 }
 .no_link:hover {
-	color: white;
+	// color: white;
 	text-decoration: none;
 }
 .panel-footer {
 	background-color: rgba(0,0,0,0.3);
 	margin-top: 50px;
 	border: none;
-	color: white;
+	// color: white;
 }
 #carousel-example-generic {
     margin-top: 20px;
@@ -97,7 +114,7 @@ input[type=submit] {
 	    width: 300px;
 }
 .add_button {
-	color: white;
+	// color: white;
 	margin-top: 15px;
 }
 .modal-content{
