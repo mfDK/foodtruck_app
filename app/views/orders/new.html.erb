@@ -8,6 +8,8 @@
 <%= f.text_field :truck_id %>
 <%= f.label :user_id %>
 <%= f.text_field :user_id , value: current_user.id %>
+<%= f.hidden_field :latitude %>
+<%= f.hidden_field :longitude %>
 
 <%= collection_select :order , :item1 , @current_truck.foods , :food_name , :food_name , prompt: true %>
 <%= collection_select :order , :item2 , @current_truck.foods , :food_name , :food_name , prompt: true %>

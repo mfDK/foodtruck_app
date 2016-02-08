@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160205204507) do
+ActiveRecord::Schema.define(version: 20160208200409) do
 
   create_table "foods", force: :cascade do |t|
     t.string   "food_name"
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20160205204507) do
     t.boolean  "confirm",    default: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "orders", ["truck_id"], name: "index_orders_on_truck_id"

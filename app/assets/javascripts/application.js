@@ -27,8 +27,13 @@ function findMe(){
 function error(){}
 
 function success(position){
+	var myLat = position.coords.latitude;
+	var myLng = position.coords.longitude;
 	var myLatLng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-	console.log(position.coords.longitude)
+	console.log(position.coords.latitude);
+	console.log(position.coords.longitude);
+	document.getElementById("order_latitude").setAttribute("value", myLat);
+  	document.getElementById("order_longitude").setAttribute("value", myLng);
 	var mapOptions = {
 		zoom: 16,
 		center: myLatLng,
@@ -41,3 +46,4 @@ function success(position){
   	position: myLatLng});
   	marker.setMap(map);
 }
+
