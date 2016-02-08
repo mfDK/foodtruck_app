@@ -30,10 +30,14 @@ function success(position){
 	var myLatLng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
 	console.log(position.coords.longitude)
 	var mapOptions = {
-		zoom: 13,
+		zoom: 16,
 		center: myLatLng,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	}
 	mapContainer = document.getElementById('map');
 	var map = new google.maps.Map(mapContainer,mapOptions);
+
+	var marker=new google.maps.Marker({
+  	position: myLatLng});
+  	marker.setMap(map);
 }
