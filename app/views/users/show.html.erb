@@ -55,8 +55,14 @@
 
 <div class="container">
 	<div class="row center banner_text">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<a href="#" class="no_link"><h1>Place your Order</h1></a>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		<h1><%= link_to "Truck 1" , truck_path(1) %></h1>
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		<h1><%= link_to "Truck 2" , truck_path(2) %></h1>
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		<h1><%= link_to "Truck 3" , truck_path(3) %></h1>
 		</div>
 	</div>
 </div>
@@ -81,7 +87,7 @@
 
 
 <div class="container">
-	<div class="row center">
+	<div class="row">
 	<div class="tab-content col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	    <div role="tabpanel" class="tab-pane active center" id="tab1">
 	    <p>11PM to 5AM</p>
@@ -121,22 +127,3 @@
   	</div>
 	</div>
 </div>
-
-
-
-
-
-<div class="container">
-	<div class="row panel-footer center">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<p>CONTACT</p>
-		<p>Help & Support</p>
-		<p>1-888-249-6070</p>
-		<p>Email Us</p>
-	</div>
-	</div>
-</div>
-
-
-<%#= link_to "Sign Up" , new_user_path %>
-
