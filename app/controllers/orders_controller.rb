@@ -36,6 +36,6 @@ class OrdersController < ApplicationController
 
   private
   def order_params
-  	params.require(:order).permit(:user_id,:truck_id,:item1,:item2,:item3,:item4,:item5,:item6,:item7,:item8,:item9,:item10)
+  	params.require(:order).permit(:user_id,:truck_id,:item1,:item2,:item3,:item4,:item5,:item6,:item7,:item8,:item9,:item10, :latitude, :longitude)
   end
 end
