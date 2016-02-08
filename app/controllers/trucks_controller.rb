@@ -1,6 +1,6 @@
 class TrucksController < ApplicationController
   def index
-    @trucks = Truck.all 
+    @all_trucks = Truck.all 
   end
 
   def show

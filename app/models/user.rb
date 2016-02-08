@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
 	has_many :orders
 	# This is from the orders table, possibly need to
 	# made a has_many :through **
+	# has_many :ordered_food , through: :order , source: :truck
 
 	geocoded_by :address
 

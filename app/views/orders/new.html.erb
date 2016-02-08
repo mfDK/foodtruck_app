@@ -1,6 +1,24 @@
 <h1>Orders#new</h1>
 <p>Find me in app/views/orders/new.html.erb</p>
 
-<%= form_for [current_user,@order] do |f| %>
-  <%= collection_select :order, :truck_id , Truck.all , :id , :name , prompt: true %>
+<h1>Order for <%= @current_truck.name %></h1>
+
+<%= form_for [@current_truck,@order] do |f| %>
+<%= f.label :truck_id %>
+<%= f.text_field :truck_id %>
+<%= f.label :user_id %>
+<%= f.text_field :user_id , value: current_user.id %>
+
+<%= collection_select :order , :item1 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item2 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item3 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item4 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item5 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item6 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item7 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item8 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item9 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+<%= collection_select :order , :item10 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+
+<%= f.submit "Submit Order" %>
 <% end %>

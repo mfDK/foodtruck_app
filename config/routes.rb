@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
-  get 'orders/index'
-
-  get 'orders/show'
-
-  get 'orders/new'
-
-  get 'orders/edit'
-
+  # get 'orders/index'
+  # get 'orders/show'
+  # get 'orders/new'
+  # get 'orders/edit'
   # get 'foods/index'
   # get 'foods/show'
   # get 'foods/new'
@@ -23,10 +19,10 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy' , as: :log_out
 
-  resources :users do 
-    resources :orders
-  end
+  resources :users 
+
   resources :trucks do 
+    resources :orders
     resources :foods
   end
 end

@@ -1,4 +1,18 @@
-<h1>Orders#show</h1>
-<p>Find me in app/views/orders/show.html.erb</p>
+<h5>Orders#show</h5>
 
-<%= @order.id %>
+<h1><%= @current_truck.name %></h1>
+<h2> Order #: <%= @order.id %> </h2>
+<li><%= @order.item1 %></li>
+<li><%= @order.item2 %></li>
+<li><%= @order.item3 %></li>
+<li><%= @order.item4 %></li>
+<li><%= @order.item5 %></li>
+<li><%= @order.item6 %></li>
+<li><%= @order.item7 %></li>
+<li><%= @order.item8 %></li>
+<li><%= @order.item9 %></li>
+<li><%= @order.item10 %></li>
+
+<% if @order.item1 == "5" %>
+	<h4>Beef Pho</h4>
+<% end %>
