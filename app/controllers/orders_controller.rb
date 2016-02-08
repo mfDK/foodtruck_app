@@ -6,6 +6,7 @@ class OrdersController < ApplicationController
   end
 
   def show
+  	@current_truck = Truck.find(params[:truck_id])
   	@order = Order.find(params[:id])
   end
 
