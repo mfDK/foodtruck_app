@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 			# current_user helper method is implemented
 		else
 			flash[:alert] = "Invalid Username or Password"
-			redirect_to login_path
+			redirect_to root_path
 		end
 	end
 

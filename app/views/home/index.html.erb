@@ -62,5 +62,8 @@
 	</div>
 </div>
 
-
-<%#= link_to "Sign Up" , new_user_path %>
+<% if logged_in? %>
+	<p>You are logged in!!!</p>
+<% else %>
+	<p>You Are an idiot!</p>
+<% end %>
