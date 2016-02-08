@@ -1,12 +1,17 @@
-<h1>Trucks#show</h1>
-
+<% if @user.truck_owner? %>
 <h2><%= @truck.name %></h2>
 <h3><%= @truck.description %></h3>
+
+<%= render 'foods/allfoods' %>
 
 <%= link_to "Edit My Truck" , edit_truck_path(@truck) %>
 <%= link_to "Add Food" , new_truck_food_path(@truck) %>
 <%= link_to "All My Foods" , truck_foods_path(@truck) %>
 
-<%= render 'foods/allfoods' %>
+<%= render "orders/new", current_truck: @current_truck %>
 
-<%= link_to "Place Order" , new_truck_order_path(@truck) %>
+<% else %>
+
+<%= render "orders/new", current_truck: @current_truck %>
+
+<% end %>
