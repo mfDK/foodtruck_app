@@ -1,11 +1,17 @@
-<h1>Sign Up</h1>
-
-<%= form_for @user do |f| %>
-	<%= f.label :email %>
-	<%= f.text_field :email %>
-	<%= f.label :password %>
-	<%= f.password_field :password %>
-	<%= f.label :password_confirmation %>
-	<%= f.password_field :password_confirmation %>
-	<%= f.submit "Sign Up" %>
-<% end %>
+<div class="container">
+	<div class="row signup_banner">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<h1 class="center">Create your Acc
+				<%= form_for @user do |f| %>
+				<%= f.label :email %>
+				<%= f.text_field :email %>
+				<%= f.label :password %>
+				<%= f.password_field :password %>
+				<%= f.label :password_confirmation %>
+				<%= f.password_field :password_confirmation %>
+				<%= f.submit "Sign Up" %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
