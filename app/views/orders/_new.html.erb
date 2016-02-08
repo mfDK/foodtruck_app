@@ -1,44 +1,7 @@
 
-<script type="text/javascript" src="orders.js"></script>
-
-<%#---------------------------------------------%>
-<% if false %>
-
-<h1>Orders#new</h1>
-<p>Find me in app/views/orders/new.html.erb</p>
-
-<h1>Order for <%= @current_truck.name %></h1>
-
-<%= form_for [@current_truck,@order] do |f| %>
-<%= f.label :truck_id %>
-<%= f.text_field :truck_id %>
-<%= f.label :user_id %>
-<%= f.text_field :user_id , value: current_user.id %>
-<%= f.hidden_field :latitude %>
-<%= f.hidden_field :longitude %>
-
-
-<%= collection_select :order , :item1 , @current_truck.foods , :food_name , :food_name , prompt: true %>
-<%= collection_select :order , :item2 , @current_truck.foods , :food_name , :food_name , prompt: true %>
-<%= collection_select :order , :item3 , @current_truck.foods , :food_name , :food_name , prompt: true %>
-<%= collection_select :order , :item4 , @current_truck.foods , :food_name , :food_name , prompt: true %>
-<%= collection_select :order , :item5 , @current_truck.foods , :food_name , :food_name , prompt: true %>
-<%= collection_select :order , :item6 , @current_truck.foods , :food_name , :food_name , prompt: true %>
-<%= collection_select :order , :item7 , @current_truck.foods , :food_name , :food_name , prompt: true %>
-<%= collection_select :order , :item8 , @current_truck.foods , :food_name , :food_name , prompt: true %>
-<%= collection_select :order , :item9 , @current_truck.foods , :food_name , :food_name , prompt: true %>
-<%= collection_select :order , :item10 , @current_truck.foods , :food_name , :food_name , prompt: true %>
-
-<%= f.submit "Submit Order" %>
-<% end %>
-
-<% end %>
-<%#---------------------------------------------%>
-
-
 <div class="container">
 	<div class="row center">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 banner_text2">
 		<h1>Menu for <%= @current_truck.name %></h1>
 	</div>
 	</div>
@@ -125,6 +88,3 @@
 		<p>Email Us</p>
 		</div>
 	</div>
-
-
-

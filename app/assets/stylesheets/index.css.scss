@@ -64,8 +64,7 @@ input[type=submit] {
 	color: black;
 }
 .map_img {
-	width: 350px;
-    margin-left: 10px;
+	width: 300px;
     margin-top: 15px;
 }
 .banner_text {
@@ -111,7 +110,8 @@ input[type=submit] {
 	margin-top: 20px;
 }
 .mobile_img {
-	    width: 300px;
+	margin-bottom: 50px;
+	width: 175px;
 }
 .add_button {
 	// color: white;
@@ -151,8 +151,14 @@ input[type=submit] {
 .nav.navbar-nav {
 	display: none;
 }
-
-
+.hidden {
+	display: none;
+}
+.banner_text2 {
+	background-color: rgba(0,0,0,0.3);
+    color: white;
+    margin-bottom: 30px;
+}
 
 }
 #map{
