@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160208200409) do
-=======
-ActiveRecord::Schema.define(version: 20160208195340) do
->>>>>>> master
 
   create_table "foods", force: :cascade do |t|
     t.string   "food_name"
