@@ -1,4 +1,5 @@
-<h1>Users#show</h1>
+<%#---------------------------------------------%>
+<% if false %>
 <h2><%= @user.fname %></h2>
 <h3><%= @user.email %></h3>
 <h4><%= @user.latitude %></h4>
@@ -21,3 +22,112 @@
 <h1>Avaliable Trucks HERE!!!</h1>
 <h3>[Test Trucks]</h3>
 <%= link_to "Pho Wheelz!" , truck_path(@test_truck) %>
+
+
+<% end %>
+<%#---------------------------------------------%>
+
+
+
+<div class="container">
+	<div class="row center banner_text">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1>Welcome <%= @user.fname %>!
+		</h1>
+		</div>
+	</div>
+</div>
+
+<div class="container container1">
+	<div class="row center">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<img src="<%=image_url("1.jpg")%>" class="map_img">
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row center banner_text">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<a href="#" class="no_link"><h1>Place your Order</h1></a>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="container">
+	<div class="row center">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<ul class="nav nav-tabs schedule1" role="tablist">
+	    	<li role="presentation" class="active"><a href="#tab1" aria-controls="home" role="tab" data-toggle="tab">Mon</a></li>
+		    <li role="presentation"><a href="#tab2" aria-controls="profile" role="tab" data-toggle="tab">Tues</a></li>
+		    <li role="presentation"><a href="#tab3" aria-controls="messages" role="tab" data-toggle="tab">Wed</a></li>
+		    <li role="presentation"><a href="#tab4" aria-controls="settings" role="tab" data-toggle="tab">Thurs</a></li>
+		    <li role="presentation"><a href="#tab5" aria-controls="settings" role="tab" data-toggle="tab">Fri</a></li>
+		    <li role="presentation"><a href="#tab6" aria-controls="settings" role="tab" data-toggle="tab">Sat</a></li>
+		    <li role="presentation"><a href="#tab7" aria-controls="settings" role="tab" data-toggle="tab">Sun</a></li>			
+	  	</ul>
+  	</div>
+  	</div>
+</div> 
+
+
+<div class="container">
+	<div class="row center">
+	<div class="tab-content col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	    <div role="tabpanel" class="tab-pane active center" id="tab1">
+	    <p>11PM to 5AM</p>
+	    <p>Brooklyn, NY</p>
+	    <p>123 Stone St.<br>Brooklyn<br>New York</p>
+	    </div>
+	    <div role="tabpanel" class="tab-pane center" id="tab2">
+	    <p>11PM to 5AM</p>
+	    <p>Queens, NY</p>
+	    <p>123 Stone St.<br>Brooklyn<br>New York</p>
+	    </div>
+	    <div role="tabpanel" class="tab-pane center" id="tab3">
+	    <p>11PM to 5AM</p>
+	    <p>Staten Island, NY</p>
+	    <p>123 Stone St.<br>Brooklyn<br>New York</p>
+	    </div>
+	    <div role="tabpanel" class="tab-pane center" id="tab4">
+	    <p>11PM to 5AM</p>
+	    <p>Bronx, NY</p>
+	    <p>123 Stone St.<br>Brooklyn<br>New York</p>
+	    </div>
+	    <div role="tabpanel" class="tab-pane center" id="tab5">
+	    <p>11PM to 5AM</p>
+	    <p>Long Island, NY</p>
+	    <p>123 Stone St.<br>Brooklyn<br>New York</p>
+	    </div>
+	    <div role="tabpanel" class="tab-pane center" id="tab6">
+	    <p>11PM to 5AM</p>
+	    <p>Manhattan, NY</p>
+	    <p>123 Stone St.<br>Brooklyn<br>New York</p>
+	    </div>
+	    <div role="tabpanel" class="tab-pane center" id="tab7">
+	    <p>11PM to 5AM</p>
+	    <p>Flushing, NY</p>
+	    <p>123 Stone St.<br>Brooklyn<br>New York</p>
+	    </div>
+  	</div>
+	</div>
+</div>
+
+
+
+
+
+<div class="container">
+	<div class="row panel-footer center">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<p>CONTACT</p>
+		<p>Help & Support</p>
+		<p>1-888-249-6070</p>
+		<p>Email Us</p>
+	</div>
+	</div>
+</div>
+
+
+<%#= link_to "Sign Up" , new_user_path %>
