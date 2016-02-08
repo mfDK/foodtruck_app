@@ -1,6 +1,6 @@
 <div class="container container1">
 	<div class="row center signin_banner">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1>Welcome to Truckly
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1 id="head-banner">Welcome to Truckly
 		</h1></div>
 	</div>
 </div>
@@ -44,29 +44,14 @@
 </div>
 </div>	
 
-<div class="container">
-<div class="row signin_form">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<h1 class="center">Log into your Account</h1>
-		<div class="login_input center">
-			<%= form_tag login_path do %>
-			  <%= label_tag :email %>
-			  <br>
-			  <%= text_field_tag :email %>
-			  <br>
-			  <%= label_tag :password %>
-			  <br>
-			  <%= password_field_tag :password %>
-			  <br><br>
-			  <%= submit_tag "Login" %>
-			<% end %>
-		</div>
-	</div>
-</div>
-</div>
+<%= render 'sessions/login' %>
 
 
 <%= render 'users/new', user: @user %>
 
 
-<%#= link_to "Sign Up" , new_user_path %>
+<% if logged_in? %>
+	<p>You are logged in!!!</p>
+<% else %>
+	<p>You Are an idiot!</p>
+<% end %>

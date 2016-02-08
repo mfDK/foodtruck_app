@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160205170854) do
+ActiveRecord::Schema.define(version: 20160208195340) do
 
   create_table "foods", force: :cascade do |t|
     t.string   "food_name"
@@ -48,10 +48,15 @@ ActiveRecord::Schema.define(version: 20160205170854) do
   create_table "trucks", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip"
+    t.string   "country"
+    t.string   "street_address"
   end
 
   create_table "users", force: :cascade do |t|
@@ -69,6 +74,7 @@ ActiveRecord::Schema.define(version: 20160205170854) do
     t.boolean  "truck_owner",     default: false
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "country"
   end
 
 end

@@ -14,3 +14,26 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+function findMe(){
+	if (navigator && navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(success,error);
+		// console.log(navigator.geolocation.getCurrentPosition(success, error))
+	}
+	else{
+		console.log("Geolocation is not supported");
+	}
+}
+
+function error(){}
+
+function success(position){
+	var myLatLng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+	console.log(position.coords.longitude)
+	var mapOptions = {
+		zoom: 13,
+		center: myLatLng,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+	mapContainer = document.getElementById('map');
+	var map = new google.maps.Map(mapContainer,mapOptions);
+}
