@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(current_user)
-    @test_truck = Truck.find(1)
+    @test_truck = Truck.find(5)
     @my_orders = current_user.orders
   end
 
