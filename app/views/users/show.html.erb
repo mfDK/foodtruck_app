@@ -1,5 +1,4 @@
 <%#---------------------------------------------%>
-<body onload="findMe()"></body>
 <% if false %>
 <h2><%= @user.fname %></h2>
 <h3><%= @user.email %></h3>
@@ -32,7 +31,7 @@
 <%#---------------------------------------------%>
 
 
-
+<body onload="findMe()">
 <div class="container">
 	<div class="row center banner_text">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1>Welcome <%= @user.fname %>!
@@ -123,3 +122,4 @@
   	</div>
 	</div>
 </div>
+</body>
