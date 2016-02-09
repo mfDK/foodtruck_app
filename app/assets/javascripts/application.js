@@ -26,12 +26,23 @@ function findMe(){
 
 function error(){}
 
+
 function success(position){
+
+	var order_lat = document.getElementById("order_latitude");
+	var order_lng = document.getElementById("order_longitude");
+
 	var myLat = position.coords.latitude;
 	var myLng = position.coords.longitude;
 	var myLatLng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
 	console.log(position.coords.latitude);
 	console.log(position.coords.longitude);
+
+	if (order_lat){
+		console.log('yes')
+		document.getElementById("order_latitude").setAttribute("value", myLat);
+  		document.getElementById("order_longitude").setAttribute("value", myLng);
+	 }
 	var mapOptions = {
 		zoom: 16,
 		center: myLatLng,
