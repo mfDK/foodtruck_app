@@ -37,9 +37,8 @@ function success(position){
 	var myLatLng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
 	console.log(position.coords.latitude);
 	console.log(position.coords.longitude);
-		
 
-	if (typeof order_lat != 'undefined'){
+	if (order_lat){
 		console.log('yes')
 		document.getElementById("order_latitude").setAttribute("value", myLat);
   		document.getElementById("order_longitude").setAttribute("value", myLng);

@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   end
 
   def show
-  	@user = User.find(current_user)
+    @user = User.find(current_user)
     @my_orders = current_user.orders
   end
 
