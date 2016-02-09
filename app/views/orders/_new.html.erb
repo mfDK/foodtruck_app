@@ -59,32 +59,40 @@
 </div>  
 
 
+
+<div class="container">
+
+	<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <%= collection_select :order , :item1 , @current_truck.foods , :food_name , :food_name , prompt: true %>
 <%= collection_select :order , :item2 , @current_truck.foods , :food_name , :food_name , prompt: true %>
 <%= collection_select :order , :item3 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+	</div>
+	</div>
+
+	<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <%= collection_select :order , :item4 , @current_truck.foods , :food_name , :food_name , prompt: true %>
 <%= collection_select :order , :item5 , @current_truck.foods , :food_name , :food_name , prompt: true %>
 <%= collection_select :order , :item6 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+	</div>
+	</div>
+
+
+	<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <%= collection_select :order , :item7 , @current_truck.foods , :food_name , :food_name , prompt: true %>
 <%= collection_select :order , :item8 , @current_truck.foods , :food_name , :food_name , prompt: true %>
 <%= collection_select :order , :item9 , @current_truck.foods , :food_name , :food_name , prompt: true %>
-<%= collection_select :order , :item10 , @current_truck.foods , :food_name , :food_name , prompt: true %>
+	</div>
+	</div>
 
+	<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<%= collection_select :order , :item10 , @current_truck.foods , :food_name , :food_name , prompt: true %>
 <%= f.submit "Submit Order" %>
 <% end %>
-
-
-
-
-
-
-
-
-	<div class="panel-footer center">
-		<div class="container-fluid">
-		<p>CONTACT</p>
-		<p>Help & Support</p>
-		<p>1-888-249-6070</p>
-		<p>Email Us</p>
-		</div>
 	</div>
+	</div>
+
+</div>
