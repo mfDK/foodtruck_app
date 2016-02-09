@@ -1,4 +1,6 @@
 <body onload="findMe()">
+<%# This is the button for the current location, it gets the current location onclick --%>
+<%= button_to "Current Location" , "javascript:findMe()" %>
 <div class="container">
 	<div class="row center banner_text">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1>Welcome <%= @user.fname %>!
@@ -15,6 +17,16 @@
 	</div>
 </div>
 
+<div id="current">
+	<div id="cLat"></div>
+	<div id="cLong"></div>
+</div>
+
+<div id="geo">
+	<h3>My Address is: <%= current_user.address %></h3>
+	<h3>My Address is: <%= current_user.geocode %></h3>
+</div>
+
 <div class="container">
 	<div class="row center banner_text">
 		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
@@ -29,7 +41,7 @@
 	</div>
 </div>
 
-
+<%= link_to "My Orders" , user_myorders_path(params[:id]) %>
 
 <div class="container">
 	<div class="row center">
