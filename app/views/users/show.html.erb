@@ -32,9 +32,14 @@
 <%#---------------------------------------------%>
 
 
-<body onload="findMe()">
+<body>
 <%# This is the button for the current location, it gets the current location onclick --%>
-<%= button_to "Current Location" , "javascript:findMe()" %>
+<%= form_for @user do |f| %>
+	<%= f.hidden_field :latitude %>
+	<%= f.hidden_field :longitude %>
+	<%= f.submit "Update your location!" %>
+<% end %>
+
 <div class="container">
 	<div class="row center banner_text">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1>Welcome <%= @user.fname %>!
