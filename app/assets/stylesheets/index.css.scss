@@ -18,10 +18,7 @@ body {
 	margin: 20px 20px;
 }
 .navbar-brand2 {
-	// margin-left: 20%;
 	font-size: 1.6em;
-	// display: inline-block;
-    // margin-top: 20px;
 }
 
 #banner_txt {
@@ -69,9 +66,8 @@ input[type=submit] {
 }
 .banner_text {
 	background-color: rgba(0,0,0,0.3);
-	width: 350px;
-    margin-left: 25px;
-    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
 
 }
 .schedule1 {
@@ -82,8 +78,6 @@ input[type=submit] {
 }
 .tab-content {
 	background-color: rgba(0,0,0,0.3);
-	width: 350px;
-    margin-left: 25px;
     margin-top: 15px;
 }
 .nav-tabs>li>a {
@@ -104,7 +98,7 @@ input[type=submit] {
 	// color: white;
 }
 #carousel-example-generic {
-    margin-top: 20px;
+    margin-top: 0px;
 }
 .panel.panel-default {
 	margin-top: 20px;
@@ -148,9 +142,6 @@ input[type=submit] {
 #bs-example-navbar-collapse-1 {
 	border: 0;
 }
-.nav.navbar-nav {
-	display: none;
-}
 .hidden {
 	display: none;
 }
@@ -159,16 +150,50 @@ input[type=submit] {
     color: white;
     margin-bottom: 30px;
 }
-
+.truck_text {
+	color: white;
+}
+.white {
+	color: white;
 }
 #map{
 	height: 400px;
 	width: 500px;	
 }
+.container3 {
+	margin-bottom: 50px;
+}
+.navbar.navbar-default {
+	height: 70px;
+}
+ul.nav.navbar-nav.navbar-right{
+	margin-top: 0px;
+}
+.navbar-nav {
+    background-color: none;
+}
+.container4 {
+	margin-top: 10px;
+}
+.jumbotron {
+	background-color: rgba(0,0,0,0.3);
+}
+
+
+
+}
+
+
+
 
 @media all and (max-width: 768px) {
-	.nav.navbar-nav {
-	display: block;
-	}
+
+.navbar-nav {
+    background-color: rgba(248,248,248,1);
+}
+
+
+
+
 }
 
