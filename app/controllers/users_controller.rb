@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(current_user)
     @my_orders = current_user.orders
-    # @truck 
+    @trucks = Truck.all 
     # if @user.update_attribute(:latitude, latitude) && @user.update_attribute(:longitude , longitude)
     #   redirect_to @user
     # end
