@@ -7,6 +7,7 @@
 <%= link_to "Edit My Truck" , edit_truck_path(@truck) %>
 <%= link_to "Add Food" , new_truck_food_path(@truck) %>
 <%= link_to "All My Foods" , truck_foods_path(@truck) %>
+<%= link_to "All My Order" , truck_orders_path(@current_truck) %>
 
 <%= render "orders/new" %>
 

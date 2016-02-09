@@ -2,10 +2,14 @@ class UsersController < ApplicationController
   def index
   end
 
+  def my_order
+    @user = User.find(params[:user_id])
+    @orders = @user.orders.all
+  end
+
   def show
     @user = User.find(current_user)
     @my_orders = current_user.orders
-    @truck 
   end
 
   def new
