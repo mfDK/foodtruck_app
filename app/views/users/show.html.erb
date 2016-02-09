@@ -1,38 +1,5 @@
-<%#---------------------------------------------%>
-
-<% if false %>
-<h2><%= @user.fname %></h2>
-<h3><%= @user.email %></h3>
-<h4><%= @user.latitude %></h4>
-<h4><%= @user.longitude %></h4>
-<h5><%= @user.truck_owner %></h5>
-
-<%= link_to "Edit" , edit_user_path(params[:id]) %>
-<%= link_to "Delete" , @user , method: :delete %>
-
-<%= link_to "Log Out" , log_out_path(current_user), method: :delete %>
-
-<% if @user.truck_owner? %>
-	<%= link_to "Create Truck" , new_truck_path %>
-<% else %>
-	<h4>You are not a truck owner</h4>
-<% end %>
-
-<%= link_to "All Trucks" , trucks_path %>
-
-<h1>Avaliable Trucks HERE!!!</h1>
-<h3>[Test Trucks]</h3>
-<%= link_to "Pho Wheelz!" , truck_path(@test_truck) %>
-
-	<div id="map">
-		
-	</div>
-
-<% end %>
-<%#---------------------------------------------%>
-
-
 <body>
+
 <%# This is the button for the current location, it gets the current location onclick --%>
 <%= form_for @user do |f| %>
 	<%= f.hidden_field :latitude %>
@@ -50,7 +17,7 @@
 
 <div class="container container1">
 	<div class="row center">
-		<div id="map" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div id="map" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 truck_text">
 	
 		</div>
 	</div>
@@ -81,7 +48,7 @@
 	</div>
 </div>
 
-
+<%= link_to "My Orders" , user_myorders_path(params[:id]) %>
 
 <div class="container">
 	<div class="row center">
@@ -102,7 +69,7 @@
 
 <div class="container">
 	<div class="row">
-	<div class="tab-content col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="tab-content col-xs-12 col-sm-12 col-md-12 col-lg-12 white">
 	    <div role="tabpanel" class="tab-pane active center" id="tab1">
 	    <p>11PM to 5AM</p>
 	    <p>Brooklyn, NY</p>
