@@ -1,8 +1,9 @@
 class OrdersController < ApplicationController
   def index
+    @user = User.find(current_user)
   	@current_truck = Truck.find(params[:truck_id])
   	# Must make this a helper method
-  	@truck_orders = @current_truck.orders.all
+  	@truck_orders = @current_truck.orders.all   
   end
 
   def show
