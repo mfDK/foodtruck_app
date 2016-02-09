@@ -29,15 +29,19 @@ function error(){}
 
 function success(position){
 
-	// var order_lat = document.getElementById("order_latitude");
-	// var order_lng = document.getElementById("order_longitude");
+	var user_lat = document.getElementById("user_latitude");
+	var user_lng = document.getElementById("user_longitude");
 
 	var myLat = position.coords.latitude;
 	var myLng = position.coords.longitude;
 	var myLatLng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
 	console.log(position.coords.latitude);
 	console.log(position.coords.longitude);
-	
+		if (user_lat){
+			user_lat.setAttribute("value", myLat);
+			user_lng.setAttribute("value", myLng);
+		}
+
 	mapContainer = document.getElementById('map');
 	var mapOptions = {
 		zoom: 16,
@@ -46,8 +50,6 @@ function success(position){
 	}
 	var map = new google.maps.Map(mapContainer,mapOptions);
 
-	document.getElementById("cLat").text = "Hello";
-	document.getElementById("cLong").text = "World";
 
 	var marker=new google.maps.Marker({
   	position: myLatLng});

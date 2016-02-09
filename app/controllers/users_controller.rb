@@ -10,6 +10,15 @@ class UsersController < ApplicationController
   def show
     @user = User.find(current_user)
     @my_orders = current_user.orders
+    @trucks = Truck.all 
+    # if @user.update_attribute(:latitude, latitude) && @user.update_attribute(:longitude , longitude)
+    #   redirect_to @user
+    # end
+
+    # @user.update(longitude: params[:longitude],latitude: params[:latitude])
+    # if @user.save
+    #   render 'show'
+    # end
   end
 
   def new
@@ -33,8 +42,9 @@ class UsersController < ApplicationController
   def update
   	@user = User.find(params[:id])
   	@user.update(user_params)
-  	@user.save
-  	redirect_to root_path
+    if @user.save
+      redirect_to user_path
+    end
   end
 
   def destroy
@@ -45,6 +55,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-  	params.require(:user).permit(:email,:password,:password_confirmation,:fname,:lname,:birthday,:street_address,:state,:city,:zip)
+  	params.require(:user).permit(:email,:password,:password_confirmation,:fname,:lname,:birthday,:street_address,:state,:city,:zip, :latitude, :longitude)
   end
 end

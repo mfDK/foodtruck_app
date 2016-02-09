@@ -1,6 +1,12 @@
-<body onload="findMe()">
+<body>
+
 <%# This is the button for the current location, it gets the current location onclick --%>
-<%= button_to "Current Location" , "javascript:findMe()" %>
+<%= form_for @user do |f| %>
+	<%= f.hidden_field :latitude %>
+	<%= f.hidden_field :longitude %>
+	<%= f.submit "Update your location!" %>
+<% end %>
+
 <div class="container">
 	<div class="row center banner_text">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1>Welcome <%= @user.fname %>!
@@ -30,14 +36,15 @@
 <div class="container">
 	<div class="row center banner_text">
 		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-		<h1><%= link_to "Truck 1" , truck_path(1) %></h1>
+		<% @trucks.each do |truck| %>
+			<% if Geocoder::Calculations.distance_between([@user.latitude,@user.longitude], [truck.latitude, truck.longitude]) < 2 %>
+				<h1><%= link_to "#{truck.name}" , truck.name %></h1>
+			<% else %>
+				<%= "Go Flog yourself"%>
+			<% end %>
+		<%	end	%>
 		</div>
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-		<h1><%= link_to "Truck 2" , truck_path(2) %></h1>
-		</div>
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-		<h1><%= link_to "Truck 3" , truck_path(3) %></h1>
-		</div>
+		
 	</div>
 </div>
 
