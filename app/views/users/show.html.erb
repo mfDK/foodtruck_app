@@ -33,6 +33,8 @@
 
 
 <body onload="findMe()">
+<%# This is the button for the current location, it gets the current location onclick --%>
+<%= button_to "Current Location" , "javascript:findMe()" %>
 <div class="container">
 	<div class="row center banner_text">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1>Welcome <%= @user.fname %>!
@@ -47,6 +49,11 @@
 	
 		</div>
 	</div>
+</div>
+
+<div id="current">
+	<div id="cLat"></div>
+	<div id="cLong"></div>
 </div>
 
 <div id="geo">
