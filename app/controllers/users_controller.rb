@@ -4,7 +4,11 @@ class UsersController < ApplicationController
 
   def my_order
     @user = User.find(params[:user_id])
-    @orders = @user.orders.all
+    @orders = @user.orders.all.reverse.take(1)
+    # the take() method is take a certain # of items
+    # passed as a argument from a collection(array)
+    @foods = Food.all
+    @total = 0
   end
 
   def show
@@ -43,7 +47,7 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
   	@user.update(user_params)
     if @user.save
-      redirect_to user_path
+      redirect_to root_path
     end
   end
 

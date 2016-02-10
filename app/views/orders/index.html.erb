@@ -1,7 +1,6 @@
 <head>
         <meta http-equiv="refresh" content="5;url=<%=user_myorders_path(@user) %>" />
 </head>
-    
 
 <% if @user.truck_owner? %>
 	<%# This is for when a user is a trucker owner %>
@@ -10,6 +9,7 @@
 	<li><%= order.id %></li>
 	<%= link_to "Show Order" , truck_order_path(params[:truck_id], order.id) %>
 	<%end%>
+
 <% else %>
 	<%# This is for when a user is not a truck owner so it should show the current users orders %>
 

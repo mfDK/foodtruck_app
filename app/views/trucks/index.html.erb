@@ -64,4 +64,30 @@
 </div>
 
 
+<% if logged_in? %>
+  <% if @user.truck_owner? %>
+	<% @my_trucks.each do |my| %>
+		<h3><%= my.name %></h3>
+		<%= link_to "Show" , truck_path(my.id) %>
+	<% end %>
+  <% else %>
+	<% @all_trucks.each do |truck| %>
+		<h2><%= truck.name %></h2>
+		<li><%= truck.description %></li>
+		<h4><%= truck.latitude %></h4>
+		<h4><%= truck.longitude %></h4>
+	<% end %>
+
+  <% end %>
+
+<% else %>
+
+	<% @all_trucks.each do |truck| %>
+		<h2><%= truck.name %></h2>
+		<li><%= truck.description %></li>
+		<h4><%= truck.latitude %></h4>
+		<h4><%= truck.longitude %></h4>
+	<% end %>
 <% end %>
+
+

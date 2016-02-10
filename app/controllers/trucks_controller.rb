@@ -1,6 +1,12 @@
 class TrucksController < ApplicationController
   def index
-    @all_trucks = Truck.all 
+    @all_trucks = Truck.all
+    if logged_in?
+      @user = User.find(current_user)
+      @my_trucks = Truck.where(user_id: current_user)
+    else
+      @all_trucks = Truck.all
+    end
   end
 
   def show

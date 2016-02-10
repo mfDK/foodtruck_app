@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 	validates_confirmation_of :password 
 	validates_presence_of :password , on: :create
 	has_many :orders
+	has_many :trucks
 	
 	# This is using the address method to use the attributes of the user model
 	# to get a full address as a string. 
