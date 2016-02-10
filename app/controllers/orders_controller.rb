@@ -20,7 +20,7 @@ class OrdersController < ApplicationController
   	@current_truck = Truck.find(params[:truck_id])
   	@order = @current_truck.orders.build(order_params)
   	if @order.save 
-  		redirect_to truck_orders_path(@current_truck)
+  		redirect_to truck_orders_path
   	else
   		render 'new'
   	end
