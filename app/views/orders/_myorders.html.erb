@@ -1,5 +1,17 @@
+<div class="container">
+	<div class="row center banner_text">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<h1>Your Most Recent Order</h1>
+		</div>
+	</div>
+</div>
+
+<div class="row container4 center white">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h4 id="head-banner2">
 <% @orders.each do |order| %>
-	<h2><%= order.id %></h2>
+	<h1><%= order.id %></h1>
+	<hr id="hr_id">
+	<h3>
 	<% if order.item1 == "" %>
 		<li>No Item</li>
 	<% else %>
@@ -109,5 +121,11 @@
 		  <% end %>
 		<% end %>
 	<% end %>
-	<h3>$<%= number_with_precision(@total, :precision => 2) %></h3>
+	</h3>
+	<hr id="hr_id">
+	<h1>$<%= number_with_precision(@total, :precision => 2) %></h1>
 <% end %>
+
+</h4>
+</div>
+</div>

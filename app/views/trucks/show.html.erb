@@ -1,13 +1,30 @@
 <% if @user.truck_owner? %>
+
+<div class="container">
+	<div class="row center banner_text">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<h1>Manage Your Truck</h1>
+		</div>
+	</div>
+</div>
+
+<div class="row center container4 white">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h4 id="head-banner2">
 <h2><%= @truck.name %></h2>
 <h3><%= @truck.description %></h3>
 
-<%= render 'foods/allfoods' %>
+<hr id="hr_id">
 
-<%= link_to "Edit My Truck" , edit_truck_path(@truck) %>
-<%= link_to "Add Food" , new_truck_food_path(@truck) %>
-<%= link_to "All My Foods" , truck_foods_path(@truck) %>
-<%= link_to "All My Order" , truck_orders_path(@current_truck) %>
+</h4>
+</div>
+</div>
+
+<h4 id="head-banner">
+<%= link_to "Edit My Truck" , edit_truck_path(@truck), class: "btn btn-primary" %>
+<%= link_to "Add Food" , new_truck_food_path(@truck), class: "btn btn-primary" %>
+<%= link_to "All My Foods" , truck_foods_path(@truck), class: "btn btn-primary" %>
+<%= link_to "All My Order" , truck_orders_path(@current_truck), class: "btn btn-primary" %>
+</h4>
 
 <%= render "orders/new" %>
 

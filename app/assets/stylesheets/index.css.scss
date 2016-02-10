@@ -45,10 +45,19 @@ nav.navbar.navbar-default {
 ////////////////////////////////////////////
 
 // This is for the h1 of the create account
+#head-banner > a {
+	color: white;
+}
+
 .create-acc {
 	color:white;
 }
 
+#head-banner2 {
+	color: white;
+	padding-left: 30px;
+	padding-right: 30px;
+}
 
 .form-input {
 	color: white;
@@ -192,7 +201,10 @@ ul.nav.navbar-nav.navbar-right{
 .container7 {
 	margin-bottom: 125px;
 }
-
+input.btn.btn-primary {
+	margin-top: 20px;
+	color: white;
+}
 
 
 }
@@ -204,6 +216,7 @@ ul.nav.navbar-nav.navbar-right{
 
 .navbar-nav {
     background-color: rgba(248,248,248,1);
+
 }
 
 
