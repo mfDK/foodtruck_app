@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 			# This will be changed to current_user once
 			# current_user helper method is implemented
 		else
-			flash[:alert] = "Invalid Username or Password"
+			flash[:login] = "Invalid Username or Password"
 			redirect_to root_path
 		end
 	end

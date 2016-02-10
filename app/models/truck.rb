@@ -2,6 +2,8 @@ class Truck < ActiveRecord::Base
 	has_many :foods
 	has_many :orders
 	belongs_to :user
+	validates :name , uniqueness: true
+	validates_presence_of :street_address , :state,:city,:zip,:country
 	# This is from the orders table, possibly need to
 	# made a has_many :through **
 	# has_many :food_ordered , through: :orders , source: :truck
