@@ -1,6 +1,11 @@
 <div class="container">
 <div class="row signin_form">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<% if flash[:login] %>
+			<div class="alert alert-danger">
+				<%= flash[:login] %>
+			</div>
+		<% end %>
 		<h1 class="center create-acc">Log into your Account</h1>
 		<div class="login_input center">
 			<%= form_tag login_path do %>
