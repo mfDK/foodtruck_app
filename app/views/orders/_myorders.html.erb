@@ -1,3 +1,113 @@
-<% @my_orders.each do |order| %>
-	<%= order.id %>
+<% @orders.each do |order| %>
+	<h2><%= order.id %></h2>
+	<% if order.item1 == "" %>
+		<li>No Item</li>
+	<% else %>
+		<% @foods.each do |food| %>
+		  <% if food.food_name == order.item1 %>
+		  	<li><%= order.item1 %></li><%= food.price %>
+		  	<% @total += food.price %> 
+		  <% end %>
+		<% end %>
+	<% end %>
+
+	<% if order.item2 == "" %>
+		<li>No Item</li>
+	<% else %>
+		<% @foods.each do |food| %>
+		  <% if food.food_name == order.item2 %>
+		  	<li><%= order.item2 %></li><%= food.price %>
+		  	<% @total += food.price %>
+		  <% end %>
+		<% end %>
+	<% end %>
+
+	<% if order.item3 == "" %>
+		<li>No Item</li>
+	<% else %>
+		<% @foods.each do |food| %>
+		  <% if food.food_name == order.item3 %>
+		  	<li><%= order.item3 %></li><%= food.price %>
+		  	<% @total += food.price %>
+		  <% end %>
+		<% end %>
+	<% end %>
+
+	<% if order.item4 == "" %>
+		<li>No Item</li>
+	<% else %>
+		<% @foods.each do |food| %>
+		  <% if food.food_name == order.item4 %>
+		  	<li><%= order.item4 %></li><%= food.price %>
+		  	<% @total += food.price %>
+		  <% end %>
+		<% end %>
+	<% end %>
+
+	<% if order.item5 == "" %>
+		<li>No Item</li>
+	<% else %>
+		<% @foods.each do |food| %>
+		  <% if food.food_name == order.item5 %>
+		  	<li><%= order.item5 %></li><%= food.price %>
+		  	<% @total += food.price %>
+		  <% end %>
+		<% end %>
+	<% end %>
+
+	<% if order.item6 == "" %>
+		<li>No Item</li>
+	<% else %>
+		<% @foods.each do |food| %>
+		  <% if food.food_name == order.item6 %>
+		  	<li><%=order.item6%></li><%= food.price %>
+		  	<% @total += food.price %>
+		  <% end %>
+		<% end %>
+	<% end %>
+
+	<% if order.item7 == "" %>
+		<li>No Item</li>
+	<% else %>
+		<% @foods.each do |food| %>
+		  <% if food.food_name == order.item7 %>
+		  	<li><%= order.item7 %></li><%= food.price %>
+		  	<% @total += food.price %>
+		  <% end %>
+		<% end %>
+	<% end %>
+
+	<% if order.item8 == "" %>
+		<li>No Item</li>
+	<% else %>
+		<% @foods.each do |food| %>
+		  <% if food.food_name == order.item8 %>
+		  	<li><%= order.item8 %></li><%= food.price %>
+		  	<% @total += food.price %>
+		  <% end %>
+		<% end %>
+	<% end %>
+
+	<% if order.item9 == "" %>
+		<li>No Item</li>
+	<% else %>
+		<% @foods.each do |food| %>
+		  <% if food.food_name == order.item9 %>
+		  	<li><%= order.item9 %></li><%= food.price %>
+		  	<% @total += food.price %>
+		  <% end %>
+		<% end %>
+	<% end %>
+
+	<% if order.item10 == "" %>
+		<li>No Item</li>
+	<% else %>
+		<% @foods.each do |food| %>
+		  <% if food.food_name == order.item10 %>
+		  	<li><%= order.item10 %></li><%= food.price %>
+		  	<% @total += food.price %>
+		  <% end %>
+		<% end %>
+	<% end %>
+	<h3>$<%= number_with_precision(@total, :precision => 2) %></h3>
 <% end %>

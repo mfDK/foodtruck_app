@@ -33,7 +33,12 @@
     
       <ul class="nav navbar-nav navbar-right">
       <% if logged_in? %>
-        <li><a href="/trucks">TRUCKS</a></li>
+        <% if current_user.truck_owner? %>
+            <li><a href="/trucks">MY TRUCKS</a></li>
+          <% else %>
+            <li><%= link_to "MY ORDERS" , user_myorders_path(current_user)%></li>
+            <li><a href="/trucks">TRUCKS</a></li>
+        <% end %>
         <li><a href="/faq">FAQ</a></li>
         <li><%= link_to "LOG OUT" , log_out_path(current_user), method: :delete %></li>
       <% else %>
