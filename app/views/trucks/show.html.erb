@@ -12,6 +12,8 @@
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h4 id="head-banner2">
 <h2><%= @truck.name %></h2>
 <h3><%= @truck.description %></h3>
+<%# This conditional is used to show a different view from a user that is not a truck owner. IF a user is a truck owner, he can add foods, edit his foods, edit his truck credentials, and look at all of his orders. %>
+
 
 <hr id="hr_id">
 
@@ -29,8 +31,9 @@
 <%= render "orders/new" %>
 
 <% else %>
-
+<%# This is is used for the user that is not a truck owner, this is where he can order from the truck %>
 <%= render "orders/new", current_truck: @current_truck %>
+<%# this @current_truck gets the params[:truck_id] %>
 
 
 

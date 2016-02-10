@@ -34,7 +34,11 @@
     
       <ul class="nav navbar-nav navbar-right">
       <% if logged_in? %>
+      <li><%= link_to "HOME" , user_path(current_user) %></li>
+      <li><%= link_to "SETTINGS", edit_user_path(current_user)%></li>
+      <%# This checks if a user is logged in %>
         <% if current_user.truck_owner? %>
+        <%# the links below will show trucks and my orders %>
             <li><a href="/trucks">MY TRUCKS</a></li>
           <% else %>
             <li><%= link_to "MY ORDERS" , user_myorders_path(current_user)%></li>
