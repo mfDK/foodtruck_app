@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
   resources :users do
     get '/myorders' => 'users#my_order'
+    # This my_order is in the users_controller
     # resources :orders
   end
  
