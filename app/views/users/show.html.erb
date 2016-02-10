@@ -33,8 +33,7 @@
 		<% @trucks.each do |truck| %>
 			<% if Geocoder::Calculations.distance_between([@user.latitude,@user.longitude], [truck.latitude, truck.longitude]) < 1 %>
 				<h1><%= link_to "#{truck.name}" , truck_path(truck.id) %></h1>
-			<% else %>
-				<%= "Go Flog yourself"%>
+		
 			<% end %>
 		<%	end	%>
 		</div>
