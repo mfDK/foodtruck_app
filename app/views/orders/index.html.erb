@@ -1,4 +1,4 @@
-<% if false %>
+
 <h1>Orders#index</h1>
 <p>Find me in app/views/orders/index.html.erb</p>
 
@@ -9,6 +9,7 @@
 	<% @truck_orders.each do |order| %>
 	<li><%= order.id %></li>
 	<%= link_to "Show Order" , truck_order_path(params[:truck_id], order.id) %>
+	<% end %>
 <% else %>
 	<%# This is for when a user is not a truck owner so it should show the current users orders %>
 	<h1>You are not supposed to see this, check back to the index.html.erb for Orders!!!</h1>
