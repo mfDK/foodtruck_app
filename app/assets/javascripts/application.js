@@ -14,6 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+
+
 function findMe(){
 	if (navigator && navigator.geolocation){
 		navigator.geolocation.getCurrentPosition(success,error);
@@ -80,4 +84,10 @@ function success(position){
 
 
 }
+
+$( document ).ready(function() {
+    $("#logo_icon2").addClass("tossing");
+});
+
+
 

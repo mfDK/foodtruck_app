@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+  <link rel="stylesheet" type="text/css" href="/animations.css">
 </head>
 <body onload="findMe()">
 
@@ -39,12 +40,11 @@
             <li><%= link_to "MY ORDERS" , user_myorders_path(current_user)%></li>
             <li><a href="/trucks">TRUCKS</a></li>
         <% end %>
-        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/about">ABOUT US</a></li>
         <li><%= link_to "LOG OUT" , log_out_path(current_user), method: :delete %></li>
       <% else %>
         <li><a href="/trucks">TRUCKS</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">PRESS</a></li>
+        <li><a href="/about">ABOUT US</a></li>
       </ul>
       <% end %>
     </div><!-- /.navbar-collapse -->
