@@ -34,6 +34,7 @@ function success(position){
 
 	var myLat = position.coords.latitude;
 	var myLng = position.coords.longitude;
+
 	var myLatLng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
 	console.log(position.coords.latitude);
 	console.log(position.coords.longitude);
@@ -44,16 +45,38 @@ function success(position){
 
 	mapContainer = document.getElementById('map');
 	var mapOptions = {
-		zoom: 16,
+		zoom: 15,
 		center: myLatLng,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	}
 	var map = new google.maps.Map(mapContainer,mapOptions);
 
 
-	var marker=new google.maps.Marker({
-  	position: myLatLng});
-  	marker.setMap(map);
+	var userMarker = new google.maps.Marker({
+  		position: myLatLng});
+  	
+  	userMarker.setMap(map);
+
+
+	var truckOneMarker = new google.maps.Marker({
+  		position: ({lat: 40.705145,lng: -74.009973}),
+  		circle: new google.maps.Circle({
+  			center: ({lat: 40.705145,lng: -74.009973}),
+  			radius: 3218.69,
+  			strokeColor: "#FF8000",
+  			strokeOpacity: 0.6,
+  			strokeWeight: 1,
+  			fillColor: "#FF8000",
+  			fillOpacity: 0.3,
+  			map: map
+  		})
+  	});
+  	truckOneMarker.setMap(map);
+  	var infowindow = new google.maps.InfoWindow({
+ 		 content:"City2 Truck"
+ 	});
+
+	infowindow.open(map,truckOneMarker);
 
 
 }
