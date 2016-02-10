@@ -35,6 +35,7 @@ class UsersController < ApplicationController
   		flash[:notice] = "You have been successfully created"
   		redirect_to edit_user_path(@user)
   	else
+      flash[:alert] = "You have an error"
   		render 'new'
   	end
   end

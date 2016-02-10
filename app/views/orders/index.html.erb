@@ -1,5 +1,6 @@
-
-
+<head>
+        <meta http-equiv="refresh" content="5;url=<%=user_myorders_path(@user) %>" />
+</head>
 
 <% if @user.truck_owner? %>
 	<%# This is for when a user is a trucker owner %>
@@ -7,10 +8,24 @@
 	<% @truck_orders.each do |order| %>
 	<li><%= order.id %></li>
 	<%= link_to "Show Order" , truck_order_path(params[:truck_id], order.id) %>
-	<% end %>
+	<%end%>
+
 <% else %>
 	<%# This is for when a user is not a truck owner so it should show the current users orders %>
-	<h1>You are not supposed to see this, check back to the index.html.erb for Orders!!!</h1>
+
+<div class="container">
+<div class="row center">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 container7">
+	<img src="<%= image_url('1d.png')%>" id="logo_icon2">
+</div>
+</div>
+
+
+	<div class="row center container5">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h3 id="head-banner">Your order has been placed. Redirecting to your order summary in 5 seconds...</h3>
+			</div>
+	</div>
+
 
 <% end %>
 
