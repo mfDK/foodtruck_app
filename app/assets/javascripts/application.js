@@ -58,11 +58,12 @@ function success(position){
   	userMarker.setMap(map);
 
 
+
 	var truckOneMarker = new google.maps.Marker({
   		position: ({lat: 40.705145,lng: -74.009973}),
   		circle: new google.maps.Circle({
   			center: ({lat: 40.705145,lng: -74.009973}),
-  			radius: 3218.69,
+  			radius: 1609.34,
   			strokeColor: "#FF8000",
   			strokeOpacity: 0.6,
   			strokeWeight: 1,
@@ -78,6 +79,7 @@ function success(position){
 
 	infowindow.open(map,truckOneMarker);
 
-
 }
+
+
 
