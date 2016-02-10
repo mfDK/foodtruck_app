@@ -1,17 +1,24 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 
 @media all and (max-width: 1600px) {
 
 body {
-	font-family: "Bree serif";
+	font-family: "Bree Serif";
 	background-color: #337AB7;
 }
 .navbar.navbar-default {
-	height: 80px;
+	z-index: 1000;
+}
+nav.navbar.navbar-default {
+	height: 55px;
 }
 .logo_icon {
 	width: 80px;
+}
+#logo_icon2 {
+	width: 250px;
 }
 .glyphicon.glyphicon-menu-hamburger{
 	font-size: 30px;
@@ -33,6 +40,7 @@ body {
 // This is for the Title of the homepage
 #head-banner {
 	color: white;
+	padding: 5px;
 }
 ////////////////////////////////////////////
 
@@ -177,6 +185,12 @@ ul.nav.navbar-nav.navbar-right{
 }
 .jumbotron {
 	background-color: rgba(0,0,0,0.3);
+}
+#hr_id {
+	width: 75%;
+}
+.container7 {
+	margin-bottom: 125px;
 }
 
 
