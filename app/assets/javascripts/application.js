@@ -19,6 +19,8 @@
 
 
 function findMe(){
+	// checks to see if  geolocation works on current browser
+	// this is also the main function that uses both the error and success functions as values and runs them
 	if (navigator && navigator.geolocation){
 		navigator.geolocation.getCurrentPosition(success,error);
 		// console.log(navigator.geolocation.getCurrentPosition(success, error))
@@ -32,24 +34,35 @@ function error(){}
 
 
 function success(position){
-
-	var user_lat = document.getElementById("user_latitude");
-	var user_lng = document.getElementById("user_longitude");
-
+	//hard coded list of all trucks
 	var myLat = position.coords.latitude;
 	var myLng = position.coords.longitude;
 
+
+	var truckLoc = [
+  		['Fidi',40.7113533, -74.00504269999999],
+  		['Flushing',40.7748021,-73.90930589999999],
+  		['Brooklyn', 40.7026415, -73.99323799999999], 
+	];
+	
+	//dom element variables
+	var user_lat = document.getElementById("user_latitude");
+	var user_lng = document.getElementById("user_longitude");
+
+
+
+	//grabs value current position of the user
 	var myLatLng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-	console.log(position.coords.latitude);
-	console.log(position.coords.longitude);
+	//checks to see if the user_latitude dom item exists. if it does it will assign the users current coords as values of that user_latitude and user_longtiude dom elements.
 		if (user_lat){
 			user_lat.setAttribute("value", myLat);
 			user_lng.setAttribute("value", myLng);
 		}
 
 	mapContainer = document.getElementById('map');
+	//creates parameters to generate google map
 	var mapOptions = {
-		zoom: 15,
+		zoom: 12,
 		center: myLatLng,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	}
@@ -61,30 +74,32 @@ function success(position){
   	
   	userMarker.setMap(map);
 
+  	// this sets markers for each truck
+  	for (i = 0; i < truckLoc.length; i++){
+  
+		var truckOneMarker = new google.maps.Marker({
+  			position: ({lat:truckLoc[i][1],lng:truckLoc[i][2]}),
+  			circle: new google.maps.Circle({
+	  			center: ({lat: truckLoc[i][1],lng: truckLoc[i][2]}),
+	  			radius: 1609.34,
+	  			strokeColor: "#FF8000",
+	  			strokeOpacity: 0.6,
+	  			strokeWeight: 1,
+	  			fillColor: "#FF8000",
+	  			fillOpacity: 0.3,
+	  			map: map
+  			})
+  		});
+  	 	truckOneMarker.setMap(map);
+  		var infoWindow = new google.maps.InfoWindow({
+ 			content:"Truck",
+ 		});
+  		// infoWindow.open(map,truckOneMarker);
+	}	
 
-
-	var truckOneMarker = new google.maps.Marker({
-  		position: ({lat: 40.705145,lng: -74.009973}),
-  		circle: new google.maps.Circle({
-  			center: ({lat: 40.705145,lng: -74.009973}),
-  			radius: 1609.34,
-  			strokeColor: "#FF8000",
-  			strokeOpacity: 0.6,
-  			strokeWeight: 1,
-  			fillColor: "#FF8000",
-  			fillOpacity: 0.3,
-  			map: map
-  		})
-  	});
-  	truckOneMarker.setMap(map);
-  	var infowindow = new google.maps.InfoWindow({
- 		 content:"City2 Truck"
- 	});
-
-	infowindow.open(map,truckOneMarker);
 
 }
-
+// jquery animation 
 $( document ).ready(function() {
     $("#logo_icon2").addClass("tossing");
 });

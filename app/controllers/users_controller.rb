@@ -48,7 +48,7 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
   	@user.update(user_params)
     if @user.save
-      redirect_to root_path
+      redirect_to user_path
     end
   end
 
