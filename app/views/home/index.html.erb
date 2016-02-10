@@ -67,10 +67,3 @@
 
 <%= render 'users/new', user: @user %>
 
-
-<% if logged_in? %>
-	<%= render 'logout' %>
-	<p>You are logged in!!!</p>
-<% else %>
-	<p>You Are an idiot!</p>
-<% end %>
