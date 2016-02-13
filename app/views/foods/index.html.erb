@@ -1,8 +1,7 @@
-<h1>Foods#index</h1>
-<p>Find me in app/views/foods/index.html.erb</p>
+<h1>All My Foods</h1>
 <% @foods.each do |food| %>
-	<%= food.food_name %>
-	<%= food.description %>
-	<%= food.price %> 
-	<%= link_to "show" , truck_food_path(params[:truck_id], food.id) %>
+	<h3><%= food.food_name %></h3>
+	<li><%= food.description %></li>
+	<li><%= food.price %> </li>
+	<%= link_to "show" , truck_food_path(params[:truck_id], food.id) , {:style => 'color:#FFFFFF'} %>
 <% end %>
