@@ -31,6 +31,7 @@
 	<div class="row center banner_text">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<h2>Available Truck: </h2>
+		<%#  This is itereating through each truck and current user to determine whether user is in range of truck %>
 		<% @trucks.each do |truck| %>
 			<% if Geocoder::Calculations.distance_between([@user.latitude,@user.longitude], [truck.latitude, truck.longitude]) < 1 %>
 				<h1><%= link_to "#{truck.name}" , truck_path(truck.id) %></h1>
