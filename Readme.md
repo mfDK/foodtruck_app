@@ -1,4 +1,7 @@
 ![Truckly Screenshot 1](/app/assets/images/truckly_github1.jpg)
+http://truckly.herokuapp.com/
+***
+
 
 # Truckly - Food Truck Drone Delivery
 My team and I collaborated to create a drone delivery service. We combined this idea with food trucks so we can further expedite the delivery, based on location. This idea derived from our love of food and technology. Working together, we were able to create a web app that allow customers to order food from each food truck. Using Google Maps API, each customer can determine if they are within range of the trucks for drone delivery service. The app also allows administrative access to manage the food trucks.
