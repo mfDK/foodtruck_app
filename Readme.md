@@ -1,4 +1,4 @@
-![Truckly Screenshot 1](/app/assets/images/truckly_github1.jpg)
+![Truckly Screenshot 1](/app/assets/images/truckly_promo1.jpg)
 http://truckly.herokuapp.com/
 ***
 
