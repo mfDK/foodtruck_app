@@ -2,8 +2,15 @@
 @import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 
+$opacity1: rgba(0,0,0,0.3);
+
+
 @media all and (max-width: 1600px) {
 
+// don't change this or extend will break
+.white {
+	color: white;
+}
 body {
 	font-family: "Bree Serif";
 	background-color: #337AB7;
@@ -32,21 +39,21 @@ nav.navbar.navbar-default {
 	text-align: center
 }
 .signin_form {
-	background-color: rgba(0,0,0,0.3);
+	background-color: $opacity1;
     height: 300px;
     margin-bottom: 30px;
 }
 
 // This is for the Title of the homepage
 #head-banner {
-	color: white;
+	@extend .white;
 	padding: 5px;
 }
 ////////////////////////////////////////////
 
 // This is for the h1 of the create account
 #head-banner > a {
-	color: white;
+	@extend .white;
 }
 
 .create-acc {
@@ -54,22 +61,22 @@ nav.navbar.navbar-default {
 }
 
 #head-banner2 {
-	color: white;
+	@extend .white;
 	padding-left: 30px;
 	padding-right: 30px;
 }
 
 .form-input {
-	color: white;
+	@extend .white;
 }
 ////////////////////////////////////////////
 
 .signup_banner {
-	background-color: rgba(0,0,0,0.3);
+	background-color: $opacity1;
     height: 400px;
 }
 .signin_banner {
-	background-color: rgba(0,0,0,0.3);
+	background-color: $opacity1;
 } 
 .center {
 	text-align: center;
@@ -82,19 +89,19 @@ input[type=submit] {
     margin-top: 15px;
 }
 .banner_text {
-	background-color: rgba(0,0,0,0.3);
+	background-color: $opacity1;
     margin-bottom: 15px;
-    color: white;
+    @extend .white;
 
 }
 .schedule1 {
 	margin-top: 40px;
 }
 .nav-tabs {
-	background-color: rgba(0,0,0,0.3);
+	background-color: $opacity1;
 }
 .tab-content {
-	background-color: rgba(0,0,0,0.3);
+	background-color: $opacity1;
     margin-top: 15px;
 }
 .nav-tabs>li>a {
@@ -102,17 +109,17 @@ input[type=submit] {
 }
 .no_link {
 	text-decoration: none;
-	// color: white;
+	// @extend .white;
 }
 .no_link:hover {
-	// color: white;
+	// @extend .white;
 	text-decoration: none;
 }
 .panel-footer {
-	background-color: rgba(0,0,0,0.3);
+	background-color: $opacity1;
 	margin-top: 50px;
 	border: none;
-	// color: white;
+	// @extend .white;
 }
 #carousel-example-generic {
     margin-top: 0px;
@@ -125,7 +132,7 @@ input[type=submit] {
 	width: 100%;
 }
 .add_button {
-	// color: white;
+	// @extend .white;
 	margin-top: 15px;
 }
 .modal-content{
@@ -163,15 +170,12 @@ input[type=submit] {
 	display: none;
 }
 .banner_text2 {
-	background-color: rgba(0,0,0,0.3);
-    color: white;
+	background-color: $opacity1;
+    @extend .white;
     margin-bottom: 30px;
 }
 .truck_text {
-	color: white;
-}
-.white {
-	color: white;
+	@extend .white;
 }
 #map{
 	height: 400px;
@@ -193,7 +197,7 @@ ul.nav.navbar-nav.navbar-right{
 	margin-top: 10px;
 }
 .jumbotron {
-	background-color: rgba(0,0,0,0.3);
+	background-color: $opacity1;
 }
 #hr_id {
 	width: 75%;
@@ -203,7 +207,7 @@ ul.nav.navbar-nav.navbar-right{
 }
 input.btn.btn-primary {
 	margin-top: 20px;
-	color: white;
+	@extend .white;
 }
 
 
