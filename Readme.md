@@ -6,8 +6,8 @@ My team and I collaborated to create a drone delivery service. We combined this 
 ## Installation
 Run `bundle install` and it will install the following gems.
 
-*geocoder
-*boostrap
+* geocoder
+* boostrap
 
 ## Usage
 Get started by scrolling down the page and creating an account. After you make an account you automatically get redirected to your account page. Click on the **Get Location** button. This will determine if there are food trucks near your location and display the food truck locations inside red circles. If you are within 2 miles of the truck locations, you can select the truck. This will bring to the order page, where you can place an order for 15 minute delivery via a drone.
